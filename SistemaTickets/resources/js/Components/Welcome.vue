@@ -1,5 +1,6 @@
 <script setup>
 import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import CrudBusqueda from './crud_busqueda.vue';
 </script>
 
 <template>
@@ -100,5 +101,6 @@ import ApplicationLogo from '@/Components/ApplicationLogo.vue';
                 </p>
             </div>
         </div>
+       <crud-busqueda>Holaa</crud-busqueda> 
     </div>
 </template>

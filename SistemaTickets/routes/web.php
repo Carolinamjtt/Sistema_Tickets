@@ -33,3 +33,34 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::get('Loging', function () {
+    return Inertia::render('Vistas/loging');
+});
+Route::get('Gestiondeperfil', function () {
+    return Inertia::render('Vistas/gestiondeperfil');
+});
+Route::get('Buscartickets', function () {
+    return Inertia::render('Vistas/busquedadetickets');
+});
+Route::get('Solicitartickets', function () {
+    return Inertia::render('Vistas/solicitartickets');
+});
+Route::get('Consultartickets', function () {
+    return Inertia::render('Vistas/consultartickets');
+});
+Route::get('Controltickets', function () {
+    return Inertia::render('Vistas/controltickets');
+});
+
+
+//rutas de los controladores de mis tickets
+Route::get('/tareas', 'MisTicketsController@index');
+
+Route::put('/tareas/actualizar', 'MisTicketsController@update');
+
+Route::post('/tareas/guardar', 'MisTicketsController@store');
+
+Route::delete('/tareas/borrar/{id}', 'MisTicketsController@destroy');
+
+Route::get('/tareas/buscar', 'MisTicketsController@show');
